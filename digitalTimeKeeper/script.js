@@ -19,6 +19,17 @@ const clockApp = {
         // Format the time string with leading zeros
         const timeString = `${this.formatNumber(hours)}:${this.formatNumber(minutes)}:${this.formatNumber(seconds)}${this.is24Hour ? '' : ' ' + ampm}`;
         document.getElementById('clock-display').innerText = timeString; // DOM Update: Push to HTML
+        
+        // Update date display
+        this.updateDate();
+    },
+
+    // Function to update the date display
+    updateDate: function() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const dateString = now.toLocaleDateString('en-US', options);
+        document.getElementById('date-display').innerText = dateString;
     },
 
     // Formatting Method: Add leading zero to numbers less than 10

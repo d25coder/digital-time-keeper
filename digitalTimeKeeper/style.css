@@ -5,7 +5,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0ce943;
+    background-color: #50ad67;
 }
 
 #clock-container {
@@ -14,6 +14,12 @@ body {
 #clock-display {
     font-size: 4rem;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#date-display {
+    font-size: 1.5rem;
     color: #333;
     margin-bottom: 20px;
 }
